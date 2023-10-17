@@ -1,15 +1,26 @@
 import "./button.css";
 
-const Button = ({ content = "manfree", type = "submit", handleClick }) => {
-  return (
-    <button type={type} onClick={handleClick}>
-      {content}
-    </button>
-  );
+const Button = ({ content }) => {
+  if (content) {
+    return <button>{content}</button>;
+  }
+  return null;
 };
 export default Button;
 
-// const Button = props => {
-//   return <button>{props?.content??"manfree"}</button>;
+// const Button = ({ content }) => {
+//   return content && <button>{content}</button>;
+// };
+// export default Button;
+
+// method-1
+
+// const Button = () => {
+//   const loginStatus = false;
+//   return (
+//     <button className={`${loginStatus ? "login" : "logout"}`}>
+//       {loginStatus ? "logout" : "login"}
+//     </button>
+//   );
 // };
 // export default Button;
