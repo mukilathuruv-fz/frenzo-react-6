@@ -1,13 +1,11 @@
 import "./App.css";
-import Button, { Text } from "./components/button/Button";
+import Button from "./components/button/Button";
 function App() {
   return (
     <div className="App">
-      <Button />
-      <Button />
-      <Text />
-      <Button />
-      <Button />
+      <Button content="login" type="submit" />
+      <Button content="logout" type="submit" />
+      <Button content="submit" type="submit" />
     </div>
   );
 }
