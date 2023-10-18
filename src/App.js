@@ -1,9 +1,9 @@
 import "./App.css";
-import Table from "./components/table/Table";
+import Counter from "./components/counter/Counter";
 function App() {
   return (
     <div className="App">
-      <Table />
+      <Counter />
     </div>
   );
 }
