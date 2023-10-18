@@ -3,16 +3,10 @@ import { useState } from "react";
 const Counter = () => {
   let [count, setCount] = useState(10);
 
-  const handleIncrement = () => {
-    setCount(count + 1);
-
-    // console.log(count);
-  };
-
   return (
     <div>
       <h1>{count}</h1>
-      <button onClick={handleIncrement}>inc</button>
+      <button onClick={() => setCount(count + 1)}>inc</button>
     </div>
   );
 };
