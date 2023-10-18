@@ -1,9 +1,9 @@
 import "./App.css";
-import Toggle from "./components/toggle/Toggle";
+import Courses from "./components/courses/Courses";
 function App() {
   return (
     <div className="App">
-      <Toggle />
+      <Courses />
     </div>
   );
 }
