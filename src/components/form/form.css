@@ -1,0 +1,77 @@
+.half {
+  width: 50% !important;
+}
+
+.full {
+  width: 100% !important;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+}
+
+.place-content-center {
+  place-content: center;
+}
+
+.grid-col-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* .border {
+  border: 1px solid green;
+} */
+
+.justify-end {
+  justify-content: end;
+}
+
+.items-start {
+  align-items: start;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.gap-2 {
+  gap: 2rem
+}
+
+.py-3 {
+  padding: 1rem 0;
+
+}
+
+.border-clear {
+  border: none;
+  outline: none;
+}
+
+.blue {
+  background-color: lightsteelblue;
+}
+
+.h-4 {
+  height: 37px;
+}
+
+.rounded {
+  border-radius: 4px;
+}
+
+.gap-1 {
+  gap: 4px
+}

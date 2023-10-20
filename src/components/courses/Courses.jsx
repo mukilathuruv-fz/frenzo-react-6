@@ -10,7 +10,7 @@ const courseList = [
 const Courses = () => {
   const [courses, setCourses] = useState(courseList);
   const handleDelete = id => {
-    const updatedCourse = courses.filter(course => course.id !== id);
+    const updatedCourse = courses.filter(course => course.id === id);
     setCourses(updatedCourse);
   };
   return (
