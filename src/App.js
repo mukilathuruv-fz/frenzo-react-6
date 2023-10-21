@@ -1,41 +1,61 @@
 import { useState } from "react";
 import "./App.css";
 import Input from "./components/input/Input";
+
+const initialState = {
+  firstname: "",
+  lastName: "",
+  email: "",
+  password: "",
+};
+
 function App() {
-  const [firstname, setFirstname] = useState("");
-  const [lastName, setlastName] = useState("");
-  const [email, setemail] = useState("");
-  const [password, setpassword] = useState("");
+  const [user, setUser] = useState(initialState);
+  const { firstname, email, lastName, password } = user;
   const handleSubmit = e => {
     e.preventDefault();
-    alert("form submission");
+    alert(JSON.stringify(user, null, 2));
+    setUser(initialState);
+  };
+
+  const handleChange = e => {
+    const { value, name } = e.target;
+
+    // const value = e.target.value;
+    // const name = e.target.name;
+
+    setUser({ ...user, [name]: value });
   };
   return (
     <form className="App" onSubmit={handleSubmit}>
       <Input
         label="first name"
         required
+        name="firstname"
         value={firstname}
-        onChange={e => setFirstname(e.target.value)}
+        onChange={handleChange}
       />
       <Input
         label="last name"
         value={lastName}
-        onChange={e => setlastName(e.target.value)}
+        onChange={handleChange}
+        name="lastName"
       />
       <Input
         label="email"
         required
         type="email"
         value={email}
-        onChange={e => setemail(e.target.value)}
+        name="email"
+        onChange={handleChange}
       />
       <Input
         label="password"
         required
+        name="password"
         type="password"
         value={password}
-        onChange={e => setpassword(e.target.value)}
+        onChange={handleChange}
       />
       <Input type="submit" />
       <h1>{`firstname ${firstname}  lastname ${lastName} email ${email} password ${password}`}</h1>

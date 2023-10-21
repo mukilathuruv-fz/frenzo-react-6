@@ -19,6 +19,7 @@ const Input = ({
         type={type}
         required={required}
         id={name}
+        name={name}
         value={value}
         onChange={onChange}
       />
