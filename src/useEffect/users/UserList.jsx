@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { getUsers } from "./api";
+
 const UserList = () => {
-  const [users, setUsers] = useState(null);
+  const [count, setCount] = useState(10);
+  const [age, setAge] = useState(20);
+  const logName = () => console.log("manfree");
+
+  useEffect(logName, [count, age]);
 
   useEffect(() => {
-    getUsers().then(data => setUsers(data));
-  }, []);
+    console.log("sample effect");
+  }, [age]);
 
-  console.log(users);
   return (
     <div>
-      {users?.map(user => (
-        <li>{user.username}</li>
-      ))}
+      <h1>{count}</h1>
+      <button onClick={() => setCount(pre => pre + 1)}>inc</button>
+      <button onClick={() => setCount(pre => pre - 1)}>dec</button>
     </div>
   );
 };
