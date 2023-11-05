@@ -1,12 +1,9 @@
-import { useState } from "react";
-import UserList from "./useEffect/users/UserList";
+import TodoContainer from "./useEffect/todos/TodoContainer";
 
 const App = () => {
-  const [show, setShow] = useState(false);
   return (
     <div>
-      <button onClick={() => setShow(!show)}>toggle</button>
-      {show && <UserList />}
+      <TodoContainer />
     </div>
   );
 };
