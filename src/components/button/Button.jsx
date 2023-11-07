@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import "./button.css";
 import { themeContext } from "../../context/ThemeContextProvider";
+import "./button.css";
 
 const Button = ({ content }) => {
   const value = useContext(themeContext);
