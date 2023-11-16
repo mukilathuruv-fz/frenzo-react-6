@@ -1,9 +1,9 @@
-import Container from "./pages/todo/Container";
+import ExpenceTracker from "./pages/ExpenceTracker";
 
 const App = () => {
   return (
     <div>
-      <Container />
+      <ExpenceTracker />
     </div>
   );
 };
